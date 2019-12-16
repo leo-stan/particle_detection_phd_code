@@ -1,0 +1,13 @@
+<launch>
+
+    <include file="$(find smoke_detection)/launch/transforms.launch"/>
+
+    <node pkg="rviz" type="rviz" name="lidar_viz"
+          args="-d $(find smoke_detection)/smoke_detection_lidar.rviz"/>
+
+    <node pkg="rviz" type="rviz" name="stereo_viz"
+          args="-d $(find smoke_detection)/smoke_detection_stereo.rviz"/>
+
+<!--    <node pkg="image_view" type="image_view" name="camera"-->
+<!--          args="image:=/multisenseS21/left/image_color"/>-->
+</launch>

@@ -1,0 +1,17 @@
+<launch>
+<!--    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_voxel_map"-->
+<!--          args="-9.9 0.1 -1.90 0 0 0 1 velodyne voxel_map 20"/>-->
+
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_voxel_map"
+          args="-19.9 -19.9 -1.90 0 0 0 1 velodyne voxel_map 20"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_og"
+          args="-15 -15 -1.35 0 0 0 1 velodyne og 20"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="multisense_to_baselink"
+          args="-0.0209126710018 0.15228191732 -0.0174461203824 -0.519346458944 0.529010462861 -0.477049826857 0.472070596905 base_link multisenseS21/left_camera_optical_frame 20"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_baselink"
+          args="0.0 0.0 0.3 -1.57079632679 0.0 0.0 base_link velodyne 20"/>
+
+</launch>

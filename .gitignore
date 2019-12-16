@@ -1,0 +1,8 @@
+venv/
+.idea/
+data/
+fusion_evaluations/
+venv_new/
+image_classifier/models/
+*.pdf
+*.png
